@@ -1,9 +1,8 @@
-import os
-
 from ynab.config import config
 
 YNAB_TOKEN = config.load_token()
-YNAB_BUDGET_ID = "last-used"
+YNAB_BUDGET_ID = config.load_budget_id()
+
 YNAB_HEADERS = {
     "Authorization": "BEARER " + YNAB_TOKEN}
 
