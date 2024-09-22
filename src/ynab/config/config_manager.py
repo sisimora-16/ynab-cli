@@ -4,6 +4,8 @@ import json
 def _get_config_directory():
     home_directory = os.path.expanduser("~")
     config_directory = os.path.join(home_directory, ".ynab-cli")
+    if not os.path.exists(config_directory):
+        os.makedirs(config_directory)
     return config_directory
 
 def save_config(data, filename):

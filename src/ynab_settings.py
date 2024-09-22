@@ -1,7 +1,7 @@
-from ynab.config import config
+from ynab.config import settings
 
-YNAB_TOKEN = config.load_token()
-YNAB_BUDGET_ID = config.load_budget_id()
+YNAB_TOKEN = settings.load_token()
+YNAB_BUDGET_ID = settings.load_budget_id()
 
 YNAB_HEADERS = {
     "Authorization": "BEARER " + YNAB_TOKEN}
